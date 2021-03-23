@@ -129,7 +129,7 @@ Lecture material for the DCH423 course - Synchrotron Radiation (SR) enabled rese
 - [ ] Particle Analyzer
 
 #### Computed Tomography to Finite Elements
-[CT2FE](From 3D CT dataset to voxel-FE model solution in Calculix) - From 3D CT datasets to voxel-Finite Element (FE) models for the prediction of bone tissue stiffness.
+[CT2FE](https://github.com/gianthk/CT2FE) - From 3D CT datasets to voxel-Finite Element (FE) models for the prediction of bone tissue stiffness.
 
 #### 3D Visualization (Paraview)
 - [X] Load
