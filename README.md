@@ -15,7 +15,6 @@ Lecture material for the DCH423 course - Synchrotron Radiation (SR) enabled rese
 
 **Other resources:**
 - [TomoPy tests](https://gitlab.com/sesame_beats/tomopy_tests/-/tree/master/) <br />
-- [Test dataset](https://sesamejo-my.sharepoint.com/:f:/g/personal/gianluca_iori_sesame_org_jo/Ei7H2BsgcgZMqiMqEzER-5oBoUlZCwY84sKT3D5i1hPc_Q?e=GgsAR6)
 
 ---
 ### Part 1: XCT and SXCT principles
