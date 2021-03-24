@@ -23,7 +23,7 @@ Lecture material for the DCH423 course - Synchrotron Radiation (SR) enabled rese
 | [FeatureJ](https://imagescience.org/meijering/software/featurej/) (optional) |  |
 
 | Python resources ||
-| --- | --- |
+| :--- | --- |
 | [BEATS/TomoPy_tests](https://gitlab.com/sesame_beats/tomopy_tests/-/tree/master/) | Gallery of TomoPy tests |
 | [pyF3D by Daniela Ushizima](https://github.com/dani-lbnl/pyF3D) | High-resolution, high-performance 3D filters and morphological operaitons in Python |
 
