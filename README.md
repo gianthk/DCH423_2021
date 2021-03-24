@@ -9,25 +9,20 @@ Lecture material for the DCH423 course - Synchrotron Radiation (SR) enabled rese
 
 ---
 ### Resources
-**Software:**
-
-|    |    |
+| **Software:** ||
 | :--- | --- |
 | [TomoPy](https://tomopy.readthedocs.io/en/latest/) | Tomographic reconstruction in Python. |
 | [Fiji (is just ImageJ)](https://fiji.sc/) | Image processing package. |
 | [ParaView](https://www.paraview.org/) | An open-source, multi-platform data analysis and visualization application. |
 | [3DSlicer](https://www.slicer.org/) | Open source software platform for medical image informatics, image processing, and three-dimensional visualization. |
-**ImageJ plugins:**
 
-|    |    |
+| **ImageJ plugins:** ||
 | :--- | --- |
 | [BoneJ](https://bonej.org/) | Plugins for bone image analysis in ImageJ |
 | [3D ImageJ Suite](https://imagejdocu.list.lu/start) | [High-throughput 3D image analysis in ImageJ](https://academic.oup.com/bioinformatics/article/29/14/1840/231770) |
 | [FeatureJ](https://imagescience.org/meijering/software/featurej/) (optional) |  |
 
-**Other stuff:**
-
-|  |  |
+| Other stuff: ||
 | --- | --- |
 | [BEATS/TomoPy_tests](https://gitlab.com/sesame_beats/tomopy_tests/-/tree/master/) | Gallery of TomoPy tests |
 | [pyF3D by Daniela Ushizima](https://github.com/dani-lbnl/pyF3D) | High-resolution, high-performance 3D filters and morphological operaitons in Python |
