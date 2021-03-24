@@ -1,20 +1,36 @@
 # 06.04.2021 - SXCT: from data collection to results
-Lecture material for the DCH423 course - Synchrotron Radiation (SR) enabled research in Heritage Sciences and Archaeology 
+Lecture material for the DCH423 course - Synchrotron Radiation (SR) enabled research in Heritage Sciences and Archaeology.
+###Contents:
+1. [X-Ray Computed Tomography (XCT) and Synchrotron XCT (SXCT) principles](#part-1-xct-and-sxct-principles)
+2. [XCT applications in Heritage and Biomedical Sciences](#part-2-xct-applications-in-heritage-and-biomedical-sciences)
+3. [Getting started with 3D image processing](#part-3-getting-started-with-3d-image-processing-)
+4. [Tomographic reconstruction with TomoPy (demo)](#part-4-tomographic-reconstruction-with-tomopy-demo)
+5. [XCT 3D image processing hands-on session](#part-5-xct-3d-image-processing-hands-on-session)
+
 ---
-### Requirements
+### Resources
 **Software:**
-- [TomoPy](https://tomopy.readthedocs.io/en/latest/) - Tomographic reconstruction in Python.
-- [Fiji (is just ImageJ)](https://fiji.sc/) - Image processing package.
-- [ParaView](https://www.paraview.org/) - An open-source, multi-platform data analysis and visualization application.
-- [3DSlicer](https://www.slicer.org/) - Open source software platform for medical image informatics, image processing, and three-dimensional visualization.
 
-**ImageJ plugins needed:**
-- [BoneJ](https://bonej.org/)
-- [3D ImageJ Suite](https://imagejdocu.list.lu/start) <br />
-- [FeatureJ](https://imagescience.org/meijering/software/featurej/) (optional)
+|    |    |
+| :--- | --- |
+| [TomoPy](https://tomopy.readthedocs.io/en/latest/) | Tomographic reconstruction in Python. |
+| [Fiji (is just ImageJ)](https://fiji.sc/) | Image processing package. |
+| [ParaView](https://www.paraview.org/) | An open-source, multi-platform data analysis and visualization application. |
+| [3DSlicer](https://www.slicer.org/) | Open source software platform for medical image informatics, image processing, and three-dimensional visualization. |
+**ImageJ plugins:**
 
-**Other resources:**
-- [TomoPy tests](https://gitlab.com/sesame_beats/tomopy_tests/-/tree/master/) <br />
+|    |    |
+| :--- | --- |
+| [BoneJ](https://bonej.org/) | Plugins for bone image analysis in ImageJ |
+| [3D ImageJ Suite](https://imagejdocu.list.lu/start) | [High-throughput 3D image analysis in ImageJ](https://academic.oup.com/bioinformatics/article/29/14/1840/231770) |
+| [FeatureJ](https://imagescience.org/meijering/software/featurej/) (optional) |  |
+
+**Other stuff:**
+
+|  |  |
+| --- | --- |
+| [BEATS/TomoPy_tests](https://gitlab.com/sesame_beats/tomopy_tests/-/tree/master/) | Gallery of TomoPy tests |
+| [pyF3D by Daniela Ushizima](https://github.com/dani-lbnl/pyF3D) | High-resolution, high-performance 3D filters and morphological operaitons in Python |
 
 ---
 ### Part 1: XCT and SXCT principles
@@ -79,9 +95,13 @@ Lecture material for the DCH423 course - Synchrotron Radiation (SR) enabled rese
     - Load (Virtual stack off)
     - Image/Adjust/Threshold
         - Otsu, Auto -> Apply
+- [X] Remove noise speckles
+    - Process/Noise/Despeckle
+
 #### Morphological operations (mask refinement)
 - [X] Keep largest strut (remove unconnected objects)
     - [Plugins/MorphoLibJ/Binary Images/Keep Largest Region](https://imagej.net/MorphoLibJ)
+    - [Plugins/BoneJ/Purify](https://bonej.org/purify) (alternatively)
     - Image/Rename (bone_tissue)
     - File/Save As
 - [X] (Alternatively) Image open (remove unconnected objects)
@@ -110,7 +130,7 @@ Lecture material for the DCH423 course - Synchrotron Radiation (SR) enabled rese
 - [X] MBA_pores and VFA_pores
     - Edit/Invert `bone_tissue`
     - Process/Image Calculator: `bone_tissue AND MBA_total_eroded`
-    - Process/Noise.Despeckle
+    - Process/Noise/Despeckle (necessary?)
     - Image/Rename (MBA_pores)
     - File/Save As
     
