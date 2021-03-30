@@ -1,7 +1,7 @@
 # 06.04.2021 - SXCT: from data collection to results
 Lecture material for the DCH423 course - Synchrotron Radiation (SR) enabled research in Heritage Sciences and Archaeology.
 ### Contents:
-1. [X-Ray Computed Tomography (XCT) and Synchrotron XCT (SXCT) principles](#part-1-xct-and-sxct-principles)
+1. [X-ray Computed Tomography (XCT) principles](#part-1-xct-and-sxct-principles)
 2. [XCT applications in Heritage and Biomedical Sciences](#part-2-xct-applications-in-heritage-and-biomedical-sciences)
 3. [Getting started with 3D image processing](#part-3-getting-started-with-3d-image-processing-)
 4. [Tomographic reconstruction with TomoPy (demo)](#part-4-tomographic-reconstruction-with-tomopy-demo)
@@ -26,10 +26,33 @@ Lecture material for the DCH423 course - Synchrotron Radiation (SR) enabled rese
 | :--- | --- |
 | [BEATS/TomoPy_tests](https://gitlab.com/sesame_beats/tomopy_tests/-/tree/master/) | Gallery of TomoPy tests |
 | [pyF3D by Daniela Ushizima](https://github.com/dani-lbnl/pyF3D) | High-resolution, high-performance 3D filters and morphological operaitons in Python |
+| [itkwidgets](https://github.com/InsightSoftwareConsortium/itkwidgets) | Interactive Jupyter widgets to visualize images, point sets, and meshes on the web |
 
 ---
-### Part 1: XCT and SXCT principles
-1. History of X-ray computed tomography (XCT)
+### References:
+#### Books
+1. Attwood D. Soft X-Rays and Extreme Ultraviolet Radiation: Principles and Applications [Internet]. Cambridge Core. Cambridge University Press; 1999 [cited 2020 Mar 28]. [link](/core/books/soft-xrays-and-extreme-ultraviolet-radiation/189E4CC382657A1680B4C457B4B29057)
+2. Paganin D. Coherent X-Ray Optics [Internet]. Coherent X-Ray Optics. Oxford University Press; [cited 2021 Mar 15]. [link](https://oxford.universitypressscholarship.com/view/10.1093/acprof:oso/9780198567288.001.0001/acprof-9780198567288)
+3. Willmot P. An Introduction to Synchrotron Radiation: Techniques and Applications. John Wiley & Sons; 2019. 501 p. 
+
+#### Lectures
+1. Howells M. Coherent x-rays: overview [Internet]. ESRF Lecture Series on Coherent X-rays and their Applications; [link](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjLrOzbo7LvAhU2ShUIHXRXAKcQFjACegQIAhAD&url=http%3A%2F%2Fwww.esrf.eu%2Ffiles%2Flive%2Fsites%2Fwww%2Ffiles%2Fevents%2Fconferences%2FTutorials%2Fslideslecture1.pdf&usg=AOvVaw1fYEHA2GREZA5YRNpIIxzb)
+2. Cloetens P. Phase Contrast Imaging - Coherent Beams [Internet]. School on X-ray Imaging Techniques at the ESRF; 2007 Feb 5 [cited 2020 Apr 21]; ESRF, Grenoble, France. [link](http://www.esrf.eu/files/live/sites/www/files/events/conferences/2007/xray-imaging-school/Presentations/07_Cloetens.pdf)
+
+#### Papers
+1. Withers PJ, Bouman C, Carmignato S, Cnudde V, Grimaldi D, Hagen CK, et al. X-ray computed tomography. Nature Reviews Methods Primers. 2021 Feb 25;1(1):1–21. 
+2. Paganin D, Mayo SC, Gureyev TE, Miller PR, Wilkins SW. Simultaneous phase and amplitude extraction from a single defocused image of a homogeneous object. Journal of Microscopy. 2002;206(1):33–40. 
+
+#### Tutorials
+1. Dragonfly Video Tutorials | Lessons for Learning Dragonfly | ORS [Internet]. [cited 2021 Mar 14]. [link](https://www.theobjects.com/dragonfly/tutorials.html)
+2. 3DSlicer Tutorials - YouTube [Internet]. [cited 2021 Mar 14]. [link](https://www.youtube.com/channel/UC8vxI0-dEWrw0_tBF-v8xGA)
+3. 3D Slicer - YouTube [Internet]. [cited 2021 Mar 14]. [link](https://www.youtube.com/channel/UC11x1iQ7ydSIFYw4L6wveXg)
+4. BioImage analysis lectures from haesleinhuepf - YouTube [Internet]. [cited 2021 Mar 14]. [link](https://www.youtube.com/channel/UC-hlwQ9Q4GS3rtv2EwSStAQ)
+
+
+---
+### Part 1: X-ray Computed Tomography (XCT) principles
+1. History of XCT
 2. XCT experimental setups
     - Cone-beam VS Parallel-beam geometries
     - CT at synchrotron facilities
@@ -53,15 +76,14 @@ Lecture material for the DCH423 course - Synchrotron Radiation (SR) enabled rese
 - [ ] Read **HDF5** file
 - [ ] Inspect projections and sinograms
 - [ ] Flat-field correction and log transform
-- [ ] Center Of Rotation (**COR**) optimization
+- [ ] Auto Center Of Rotation (**COR**) detection
+- [ ] **COR** optimization (manual inspection)
 - [ ] Tomographic reconstruction in **TomoPy**
 - [ ] Apply **circular mask**
 - [ ] Write output stack of **TIFFS**
-- [ ] control **bitdepth** of output slices (?)
 - [ ] **Phase retrieval** algorithms in TomoPy - comparison with absorption recon
-- [ ] Full recon using the TomoPy **command line interface**
-- [ ] Reconstruction on **Cyclone** supercomputer
-- [ ] Launch reconstructions via **batch script**
+- [ ] Full TomoPy recon **script**
+- [ ] TomoPy recon on **Cyclone** supercomputer (batch script)
 
 ### Part 5: XCT 3D image processing hands-on session
 #### ImageJ - Input/Output
