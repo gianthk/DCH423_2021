@@ -1,7 +1,7 @@
 # 06.04.2021 - SXCT: from data collection to results
 Lecture material for the DCH423 course - Synchrotron Radiation (SR) enabled research in Heritage Sciences and Archaeology.
 ### Contents:
-1. [X-ray Computed Tomography (XCT) principles](#part-1-xct-and-sxct-principles)
+1. [X-ray Computed Tomography (XCT) principles](#part-1-x-ray-computed-tomography-xct-principles)
 2. [XCT applications in Heritage and Biomedical Sciences](#part-2-xct-applications-in-heritage-and-biomedical-sciences)
 3. [Tomographic reconstruction with TomoPy (demo)](#part-3-tomographic-reconstruction-with-tomopy-demo)
 4. [XCT 3D image processing hands-on session](#part-4-xct-3d-image-processing-hands-on-session)
