@@ -3,9 +3,8 @@ Lecture material for the DCH423 course - Synchrotron Radiation (SR) enabled rese
 ### Contents:
 1. [X-ray Computed Tomography (XCT) principles](#part-1-xct-and-sxct-principles)
 2. [XCT applications in Heritage and Biomedical Sciences](#part-2-xct-applications-in-heritage-and-biomedical-sciences)
-3. [Getting started with 3D image processing](#part-3-getting-started-with-3d-image-processing-)
-4. [Tomographic reconstruction with TomoPy (demo)](#part-4-tomographic-reconstruction-with-tomopy-demo)
-5. [XCT 3D image processing hands-on session](#part-5-xct-3d-image-processing-hands-on-session)
+3. [Tomographic reconstruction with TomoPy (demo)](#part-3-tomographic-reconstruction-with-tomopy-demo)
+4. [XCT 3D image processing hands-on session](#part-4-xct-3d-image-processing-hands-on-session)
 
 ---
 ### Resources
@@ -24,7 +23,7 @@ Lecture material for the DCH423 course - Synchrotron Radiation (SR) enabled rese
 
 | Python resources ||
 | :--- | --- |
-| [BEATS/TomoPy_tests](https://gitlab.com/sesame_beats/tomopy_tests/-/tree/master/) | Gallery of TomoPy tests |
+| [TomoPy_recon notebook](https://github.com/gianthk/DCH423_2021/blob/master/notebooks/TomoPy_recon.ipynb) | Jupyter notebook of TomoPy reconstruction test |
 | [pyF3D by Daniela Ushizima](https://github.com/dani-lbnl/pyF3D) | High-resolution, high-performance 3D filters and morphological operaitons in Python |
 | [itkwidgets](https://github.com/InsightSoftwareConsortium/itkwidgets) | Interactive Jupyter widgets to visualize images, point sets, and meshes on the web |
 
@@ -42,6 +41,10 @@ Lecture material for the DCH423 course - Synchrotron Radiation (SR) enabled rese
 #### Papers
 1. Withers PJ, Bouman C, Carmignato S, Cnudde V, Grimaldi D, Hagen CK, et al. X-ray computed tomography. Nature Reviews Methods Primers. 2021 Feb 25;1(1):1–21. 
 2. Paganin D, Mayo SC, Gureyev TE, Miller PR, Wilkins SW. Simultaneous phase and amplitude extraction from a single defocused image of a homogeneous object. Journal of Microscopy. 2002;206(1):33–40. 
+3. Dambrogio J, Ghassaei A, Smith DS, Jackson H, Demaine ML, Davis G, et al. Unlocking history through automated virtual unfolding of sealed documents imaged by X-ray microtomography. Nat Commun. 2021 Mar 2;12(1):1–10. 
+4. Kersh ME. Resolving nanoscale strains in whole joints. Nat Biomed Eng. 2020 Mar;4(3):257–8. 
+5. Madi K, Staines KA, Bay BK, Javaheri B, Geng H, Bodey AJ, et al. In situ characterization of nanoscale strains in loaded whole joints via synchrotron X-ray tomography. Nat Biomed Eng. 2020 Mar;4(3):343–54. 
+6. Bernardini F, Tuniz C, Coppa A, Mancini L, Dreossi D, Eichert D, et al. Beeswax as Dental Filling on a Neolithic Human Tooth. PLoS One [Internet]. 2012 Sep 19 [cited 2020 Feb 2];7(9). Available from: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3446997/
 
 #### Tutorials
 1. Dragonfly Video Tutorials | Lessons for Learning Dragonfly | ORS [Internet]. [cited 2021 Mar 14]. [link](https://www.theobjects.com/dragonfly/tutorials.html)
@@ -69,10 +72,8 @@ Lecture material for the DCH423 course - Synchrotron Radiation (SR) enabled rese
 - Dambrogio, Jana, Amanda Ghassaei, Daniel Starza Smith, Holly Jackson, Martin L. Demaine, Graham Davis, David Mills, et al. 2021. “Unlocking History through Automated Virtual Unfolding of Sealed Documents Imaged by X-Ray Microtomography.” Nature Communications 12 (1): 1–10. https://doi.org/10.1038/s41467-021-21326-w.
 - Madi, Kamel, Katherine A. Staines, Brian K. Bay, Behzad Javaheri, Hua Geng, Andrew J. Bodey, Sarah Cartmell, Andrew A. Pitsillides, and Peter D. Lee. 2020. “In Situ Characterization of Nanoscale Strains in Loaded Whole Joints via Synchrotron X-Ray Tomography.” Nature Biomedical Engineering 4 (3): 343–54. https://doi.org/10.1038/s41551-019-0477-1.
 
-### Part 3: Getting started with 3D image processing (?)
-...
 
-### Part 4: Tomographic reconstruction with TomoPy (demo)
+### Part 3: Tomographic reconstruction with TomoPy (demo)
 - [ ] Read **HDF5** file
 - [ ] Inspect projections and sinograms
 - [ ] Flat-field correction and log transform
@@ -85,7 +86,7 @@ Lecture material for the DCH423 course - Synchrotron Radiation (SR) enabled rese
 - [ ] Full TomoPy recon **script**
 - [ ] TomoPy recon on **Cyclone** supercomputer (batch script)
 
-### Part 5: XCT 3D image processing hands-on session
+### Part 4: XCT 3D image processing hands-on session
 #### ImageJ - Input/Output
 - [X] Loading large dataset in ImageJ
 - [X] Image/Show Info
