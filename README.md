@@ -130,6 +130,7 @@ We check that the masking operation was fine, that we haven't introduced artefac
 - [X] Image/Color/Merge Channels
     - `C2 (green): MBA_tissue`
     - `C4 (gray): cropped_rescale_025`
+![Overlay](figures/Composite.png)
 
 #### Morphological operations (mask refinement)
 - [X] Keep largest strut (remove unconnected objects)
