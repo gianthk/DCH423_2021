@@ -90,13 +90,18 @@ Lecture material for the DCH423 course - Synchrotron Radiation (SR) enabled rese
 #### ImageJ - Input/Output
 - [X] Loading large dataset in ImageJ
 - [X] Image/Show Info
-- [X] Adjust pixel size (Image/Properties)
-- [X] Analyze/Measure
+- [X] Adjust pixel size to 1.625 um (Image/Properties)
+- [X] Draw line; Analyze/Measure
+- [X] Note that there are ring artefacts (slice 754)! We will crop them away :(
 - [X] 3D filtering (Process/Filters/Gaussian Blur)
-- [X] Rescale (Image/Scale)
+- [X] Rescale with factor 4 (Image/Scale)
 - [X] Save! (File/Save As/Image Sequence)
+- [X] Load cropped_rescale_025_00
+- [X] Check rings @ slice 189
 - [X] 3D ROI crop (Plugins/Stacks/Crop (3D))
 - [X] Save! (File/Save As/Image Sequence)
+- [X] Load cropped_rescale_025 and show result
+- [X] Show 3D rendering: VFA=bottom)
 #### Thresholding
 - [X] Manual 3D ROI selection in 3DSlicer: separate VFA and MBA
     - File/Add Data
@@ -105,10 +110,13 @@ Lecture material for the DCH423 course - Synchrotron Radiation (SR) enabled rese
         - **Draw**
         - Fill between slices/Initialize/Allow overlap/Apply
         - Export as STL
-        - Segmentations button
-        - Export to new labelmap
+            - Segmentations button
+            - Export to new labelmap
     - **Segmentation module**
         - Save
+- [X] Inspect it in ImageJ
+    - A mask is made of ones and zeroes
+    - Image/Overlay/Add Image
 - [X] Automatic thresholding in ImageJ: bone_tissue mask
     - Load (Virtual stack off)
     - Image/Adjust/Threshold
@@ -126,7 +134,7 @@ Lecture material for the DCH423 course - Synchrotron Radiation (SR) enabled rese
     - Process/Binary/Open
 - [X] Logical operations on masks: VFA_tissue; MBA_tissue
     - Load MBA-VFA separation
-    - Process/Binary/Make mask
+    - Process/Binary/Make binary
     - Process/Image Calculator: `bone_tissue AND VFA_separation`
     - Plugins/MorphoLibJ/Binary Images/Keep Largest Region    
     - Image/Rename (VFA_tissue)
@@ -134,17 +142,17 @@ Lecture material for the DCH423 course - Synchrotron Radiation (SR) enabled rese
     - Process/Image Calculator: `bone_tissue - VFA_tissue`
     - Image/Rename (MBA_tissue)
     - File/Save As
-- [X] Erode, Dilate, Open, Close: MBA_total and VFA_total
+- [X] **Towards BV/TV!!** Erode, Dilate, Open, Close: MBA_total and VFA_total
     - Plugins/MorphoLibJ/Morphological Filters (3D)
-        - Closing; Cube (4x4x4)
-    - Plugins/MorphoLibJ/Extend Image Borders (L1, R1, T0, B1, F1, B1)
+        - Dilate; Cube (4x4x4)
+    - Plugins/MorphoLibJ/Extend Image Borders (L1, R1, T0, B1, F1, B1; White)
     - Plugins/3D/3D Fill Holes
-    - Plugins/Stacks/Crop 3D [1:649, 1:649, 2:350]
+    - Plugins/Stacks/Crop 3D [1:649, 0:648, 2:350]
     - Plugins/MorphoLibJ/Binary Images/Keep Largest Region    
     - Image/Rename (MBA_total)
     - File/Save As
     - Plugins/MorphoLibJ/Morphological Filters (3D)
-        - Erosion; Cube (3x3x3)
+        - Erosion; Cube (4x4x4)
 - [X] MBA_pores and VFA_pores
     - Edit/Invert `bone_tissue`
     - Process/Image Calculator: `bone_tissue AND MBA_total_eroded`
