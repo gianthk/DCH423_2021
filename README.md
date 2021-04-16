@@ -102,6 +102,7 @@ Lecture material for the DCH423 course - Synchrotron Radiation (SR) enabled rese
 - [X] Save! (File/Save As/Image Sequence)
 - [X] Load cropped_rescale_025 and show result
 - [X] Show 3D rendering: VFA=bottom)
+
 #### Thresholding
 - [X] Manual 3D ROI selection in 3DSlicer: separate VFA and MBA
     - File/Add Data
@@ -124,6 +125,12 @@ Lecture material for the DCH423 course - Synchrotron Radiation (SR) enabled rese
 - [X] Remove noise speckles
     - Process/Noise/Despeckle
 
+#### Perform checks!!
+We check that the masking operation was fine, that we haven't introduced artefacts (e.g. wrongly removed bone areas).
+- [X] Image/Color/Merge Channels
+    - `C2 (green): MBA_tissue`
+    - `C4 (gray): cropped_rescale_025`
+
 #### Morphological operations (mask refinement)
 - [X] Keep largest strut (remove unconnected objects)
     - [Plugins/MorphoLibJ/Binary Images/Keep Largest Region](https://imagej.net/MorphoLibJ)
@@ -142,7 +149,8 @@ Lecture material for the DCH423 course - Synchrotron Radiation (SR) enabled rese
     - Process/Image Calculator: `bone_tissue - VFA_tissue`
     - Image/Rename (MBA_tissue)
     - File/Save As
-- [X] **Towards BV/TV!!** Erode, Dilate, Open, Close: MBA_total and VFA_total
+#### Towards Bone Volume Fraction (BV/TV)!!
+- [X] Image Erode, Dilate, Open, Close: MBA_total and VFA_total
     - Plugins/MorphoLibJ/Morphological Filters (3D)
         - Dilate; Cube (4x4x4)
     - Plugins/MorphoLibJ/Extend Image Borders (L1, R1, T0, B1, F1, B1; White)
@@ -160,12 +168,17 @@ Lecture material for the DCH423 course - Synchrotron Radiation (SR) enabled rese
     - Image/Rename (MBA_pores)
     - File/Save As
     
-#### Quantitative analysis (ImageJ-BoneJ and Python)
+#### Quantitative analysis (ImageJ-BoneJ)
 - [X] BV/TV
     - Load MBA_tissue, MBA_total, VFA_tissue, VFA_total
     - Plugins/BoneJ/Fraction/Volume Fraction
+    - Repeat for MBA_tissue, MBA_total, VFA_tissue, VFA_total; we are only interested in TV
+    - `BVTV_MBA = TV_MBA_tissue / TV_MBA_total`
+    - `BVTV_VFA = TV_VFA_tissue / TV_VFA_total` 
 - [X] Tissue density
     - Process/Image Calculator: `MBA_tissue AND cropped_rescale_025`
+    - Histogram `(shortcut: "h")`
+    - Repeat for VFA
 - [ ] Connectivity
 - [ ] Thickness
     - Pores
@@ -178,7 +191,6 @@ Lecture material for the DCH423 course - Synchrotron Radiation (SR) enabled rese
 [CT2FE](https://github.com/gianthk/CT2FE) - From 3D CT datasets to voxel-Finite Element (FE) models for the prediction of bone tissue stiffness.
 
 #### 3D Visualization (Paraview)
-- [X] Load
 - [X] Slice
 - [X] Threshold
 - [X] Clip
