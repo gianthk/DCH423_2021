@@ -72,18 +72,17 @@ Lecture material for the DCH423 course - Synchrotron Radiation (SR) enabled rese
 - Dambrogio, Jana, Amanda Ghassaei, Daniel Starza Smith, Holly Jackson, Martin L. Demaine, Graham Davis, David Mills, et al. 2021. “Unlocking History through Automated Virtual Unfolding of Sealed Documents Imaged by X-Ray Microtomography.” Nature Communications 12 (1): 1–10. https://doi.org/10.1038/s41467-021-21326-w.
 - Madi, Kamel, Katherine A. Staines, Brian K. Bay, Behzad Javaheri, Hua Geng, Andrew J. Bodey, Sarah Cartmell, Andrew A. Pitsillides, and Peter D. Lee. 2020. “In Situ Characterization of Nanoscale Strains in Loaded Whole Joints via Synchrotron X-Ray Tomography.” Nature Biomedical Engineering 4 (3): 343–54. https://doi.org/10.1038/s41551-019-0477-1.
 
-
 ### Part 3: Tomographic reconstruction with TomoPy (demo)
-- [ ] Read **HDF5** file
-- [ ] Inspect projections and sinograms
-- [ ] Flat-field correction and log transform
-- [ ] Auto Center Of Rotation (**COR**) detection
-- [ ] **COR** optimization (manual inspection)
-- [ ] Tomographic reconstruction in **TomoPy**
-- [ ] Apply **circular mask**
-- [ ] Write output stack of **TIFFS**
+- [X] Read **HDF5** file
+- [X] Inspect projections and sinograms
+- [X] Flat-field correction and log transform
+- [X] Auto Center Of Rotation (**COR**) detection
+- [X] **COR** optimization (manual inspection)
+- [X] Tomographic reconstruction in **TomoPy**
+- [X] Apply **circular mask**
+- [X] Write output stack of **TIFFS**
 - [ ] **Phase retrieval** algorithms in TomoPy - comparison with absorption recon
-- [ ] Full TomoPy recon **script**
+- [ ] Full tomopy-cli recon
 - [ ] TomoPy recon on **Cyclone** supercomputer (batch script)
 
 ### Part 4: XCT 3D image processing hands-on session
